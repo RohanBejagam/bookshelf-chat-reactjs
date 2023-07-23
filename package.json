@@ -1,0 +1,41 @@
+{
+  "name": "lib_management",
+  "version": "1.0.0",
+  "description": "Library Management Website using MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "KARTHIK PAVANI ROHAN",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.2.3",
+    "bootstrap-social": "^5.1.1",
+    "concurrently": "^6.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^5.3.0",
+    "mongoose": "^6.10.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "react-popper": "^2.3.0",
+    "react-redux": "^8.0.5",
+    "reactstrap": "^9.1.9",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
