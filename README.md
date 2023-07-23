@@ -13,6 +13,7 @@ A student can
 * change his password
 * search for books and view availabilty
 * view his issue history
+* Ask conceptual doubts and get clarified by AI chat support
 
 ### Admin
 
@@ -28,18 +29,10 @@ An admin can
 * view issue log and the profile of all the students
 * view the profile of all admins 
 
-## A note to the viewers
-
-1. You can try logging in as an **admin** by entering the following credentials:
-
-* **username**: *Director*
-* **password**: *123pass*
-
-2. You can also register yourself as a student and then login to view the options available to a student.
 
 ## View live App
 
-Hosted at https://lib-manage.herokuapp.com/
+Hosted at https:
 
 ## Tech Stack Used
 
@@ -138,37 +131,3 @@ npm i redux react-redux redux-thunk
 ```
 
 5. Create a redux store, the various actions and reducers required in a folder named redux. Make corresponding changes in the React components to map the actions and state to props
-
-### Deployment
-
-1. Add the following lines to server.js :
-
-```(JavaScript)
-// Serve static assets if in production
-if (process.env.NODE_ENV === 'production') {
-    // Set static folder
-    app.use(express.static('client/build'));
-  
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    });
-  }
-```
-
-2. Add the following script to the package.json of server
-
-```(JSON)
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-```
-
-3. Install Heroku CLI and make sure you have intialised a git repository in the project directory. Enter the following commands in the terminal :
-
-```(bash)
-heroku login
-heroku create
-git add .
-git commit -am "Deployed to Heroku"
-git push heroku master
-```
-
-4. Open your heroku account and click on **Open App** option in the dashboard.
