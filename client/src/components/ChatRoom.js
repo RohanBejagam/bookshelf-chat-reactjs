@@ -3,7 +3,7 @@ import { useState } from 'react'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "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";
+const API_KEY = "your API key from Open AI";
 
 const systemMessage = { 
   "role": "system", "content": "explain as you are a lecturer of university"

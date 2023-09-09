@@ -18,7 +18,7 @@ function RenderIssue ({issue,i}) {
     let fine=0;
       if(((returnDate.getTime()-issueDate.getTime())/(1000 * 60 * 60 * 24))>allowedDays)
       {
-        fine=Math.floor((returnDate.getTime()-issueDate.getTime())/(1000 * 60 * 60 * 24))*fineRate;
+        fine=Math.floor((returnDate.getTime()-deadline.getTime())/(1000 * 60 * 60 * 24))*fineRate;
       }
    totalFine+=fine;
     return (

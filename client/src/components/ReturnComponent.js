@@ -21,7 +21,7 @@ function RenderIssue ({issue,i,returnBook}) {
     console.log((returnDate.getTime()-issueDate.getTime())/(1000 * 60 * 60 * 24));
       if(((returnDate.getTime()-issueDate.getTime())/(1000 * 60 * 60 * 24))>=allowedDays)
       {
-        fine=Math.floor((returnDate.getTime()-issueDate.getTime())/(1000 * 60 * 60 * 24))*fineRate;
+        fine=Math.floor((returnDate.getTime()-deadline.getTime())/(1000 * 60 * 60 * 24))*fineRate;
       }
 //    totalFine+=fine;
 //    console.log("total fine:"+totalFine);
